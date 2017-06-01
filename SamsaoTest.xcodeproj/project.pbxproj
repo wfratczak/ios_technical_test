@@ -230,6 +230,14 @@
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Samsao;
+				TargetAttributes = {
+					27716DFF58208BD0FEE63C15 = {
+						LastSwiftMigration = 0830;
+					};
+					44AE6C221AEEF8E4922EDA05 = {
+						LastSwiftMigration = 0830;
+					};
+				};
 			};
 			buildConfigurationList = E6E6D3F4CCF71F6630B9143B /* Build configuration list for PBXProject "SamsaoTest" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -312,6 +320,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -331,6 +340,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -454,6 +464,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.samsao.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -470,6 +481,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = co.samsao.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
