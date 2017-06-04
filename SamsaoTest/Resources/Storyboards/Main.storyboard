@@ -1,7 +1,83 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xWV-IY-MJq">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Repositories View Controller-->
+        <scene sceneID="SaO-Rx-hqa">
+            <objects>
+                <viewController id="hpn-HO-mgR" customClass="RepositoriesViewController" customModule="SamsaoTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gZl-pf-K3v"/>
+                        <viewControllerLayoutGuide type="bottom" id="WIR-0G-TSH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sOJ-5k-kwH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8bE-4R-UNK">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.023524917662143707" green="0.023532388731837273" blue="0.023522557690739632" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8bE-4R-UNK" secondAttribute="trailing" id="5ga-tP-3hw"/>
+                            <constraint firstItem="8bE-4R-UNK" firstAttribute="top" secondItem="gZl-pf-K3v" secondAttribute="bottom" id="8PA-52-aBW"/>
+                            <constraint firstItem="WIR-0G-TSH" firstAttribute="top" secondItem="8bE-4R-UNK" secondAttribute="bottom" id="Nto-cg-oJv"/>
+                            <constraint firstItem="8bE-4R-UNK" firstAttribute="leading" secondItem="sOJ-5k-kwH" secondAttribute="leading" id="l0M-o0-Vtq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZcR-X1-o5l">
+                        <nil key="title"/>
+                        <view key="titleView" contentMode="scaleToFill" id="SDG-IW-GFT">
+                            <rect key="frame" x="112.5" y="5.5" width="150" height="33"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="samsao_logo_blanc-1" translatesAutoresizingMaskIntoConstraints="NO" id="VbE-50-Hmb">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="33"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="VbE-50-Hmb" firstAttribute="leading" secondItem="SDG-IW-GFT" secondAttribute="leading" id="0Zk-NN-AMO"/>
+                                <constraint firstAttribute="bottom" secondItem="VbE-50-Hmb" secondAttribute="bottom" id="A5u-kN-Z80"/>
+                                <constraint firstItem="VbE-50-Hmb" firstAttribute="top" secondItem="SDG-IW-GFT" secondAttribute="top" id="Mqf-6y-Ouf"/>
+                                <constraint firstAttribute="trailing" secondItem="VbE-50-Hmb" secondAttribute="trailing" id="Yd6-9m-zIk"/>
+                            </constraints>
+                        </view>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aew-BL-ocR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="810" y="137"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mxH-UI-rcx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xWV-IY-MJq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Q2e-PF-CGq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hpn-HO-mgR" kind="relationship" relationship="rootViewController" id="DVh-9c-mSg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j7c-mn-der" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.600000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="samsao_logo_blanc-1" width="196" height="35"/>
+    </resources>
 </document>
