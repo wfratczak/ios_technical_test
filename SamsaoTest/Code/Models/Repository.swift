@@ -15,9 +15,9 @@ class Repository {
     var defaultBranch: String!
     var forksNumber: Int!
     var name: String!
-    var updateAt: NSDate!
     var description: String!
-    var createdAt: NSDate!
+    var createdAt: Date!
+    var updatedAt: Date!
     
     required init?(map: Map){}
 }
@@ -31,9 +31,9 @@ extension Repository: Mappable {
         defaultBranch <- map["default_branch"]
         name <- map["full_name"]
         forksNumber <- map["forks"]
-        updateAt <- map["updated_at"]
+        updatedAt <- (map["updated_at"], RepositoryDateTransform())
         description <- map["description"]
-        createdAt <- map["createdAt"]
+        createdAt <- (map["created_at"], RepositoryDateTransform())
     }
     
 }

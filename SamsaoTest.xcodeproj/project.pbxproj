@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1582BC821EE4C9CA0087D139 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1582BC811EE4C9CA0087D139 /* UIViewController.swift */; };
+		1582BC851EE4D2A60087D139 /* RepositoryDateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1582BC841EE4D2A60087D139 /* RepositoryDateTransform.swift */; };
 		158CA0C51EE4B0BD0015CA1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158CA0C11EE4B0BD0015CA1B /* AppDelegate.swift */; };
 		158CA0CA1EE4B5270015CA1B /* Muli-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 158CA0C71EE4B5270015CA1B /* Muli-Bold.ttf */; };
 		158CA0CB1EE4B5270015CA1B /* Muli-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 158CA0C81EE4B5270015CA1B /* Muli-Light.ttf */; };
@@ -36,6 +38,8 @@
 /* Begin PBXFileReference section */
 		06AC0D7D02AD00A7CDEE668E /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		0E0B1E3C3187E6E655FB5AC6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1582BC811EE4C9CA0087D139 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		1582BC841EE4D2A60087D139 /* RepositoryDateTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryDateTransform.swift; sourceTree = "<group>"; };
 		158CA0C11EE4B0BD0015CA1B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		158CA0C71EE4B5270015CA1B /* Muli-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Bold.ttf"; sourceTree = "<group>"; };
 		158CA0C81EE4B5270015CA1B /* Muli-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Light.ttf"; sourceTree = "<group>"; };
@@ -77,10 +81,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1582BC801EE4C9BF0087D139 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1582BC811EE4C9CA0087D139 /* UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1582BC831EE4D28C0087D139 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1582BC841EE4D2A60087D139 /* RepositoryDateTransform.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		158CA0C01EE4B0BD0015CA1B /* Code */ = {
 			isa = PBXGroup;
 			children = (
 				158CA0C11EE4B0BD0015CA1B /* AppDelegate.swift */,
+				1582BC831EE4D28C0087D139 /* Other */,
+				1582BC801EE4C9BF0087D139 /* Extensions */,
 				158CA0C21EE4B0BD0015CA1B /* Controllers */,
 				158CA0C31EE4B0BD0015CA1B /* Models */,
 				158CA0C41EE4B0BD0015CA1B /* Views */,
@@ -415,9 +437,11 @@
 			files = (
 				158CA0CE1EE4B58C0015CA1B /* RepositoriesViewController.swift in Sources */,
 				158CA0D01EE4B59A0015CA1B /* RepositoryViewController.swift in Sources */,
+				1582BC821EE4C9CA0087D139 /* UIViewController.swift in Sources */,
 				158CA0D41EE4B8D70015CA1B /* APIManager.swift in Sources */,
 				158CA0C51EE4B0BD0015CA1B /* AppDelegate.swift in Sources */,
 				158CA0D21EE4B5AA0015CA1B /* Repository.swift in Sources */,
+				1582BC851EE4D2A60087D139 /* RepositoryDateTransform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
