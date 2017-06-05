@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1582BC821EE4C9CA0087D139 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1582BC811EE4C9CA0087D139 /* UIViewController.swift */; };
 		1582BC851EE4D2A60087D139 /* RepositoryDateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1582BC841EE4D2A60087D139 /* RepositoryDateTransform.swift */; };
+		1582BC871EE4D9370087D139 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1582BC861EE4D9370087D139 /* RepositoryCell.swift */; };
+		1582BC891EE4D9600087D139 /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1582BC881EE4D9600087D139 /* Array.swift */; };
 		158CA0C51EE4B0BD0015CA1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 158CA0C11EE4B0BD0015CA1B /* AppDelegate.swift */; };
 		158CA0CA1EE4B5270015CA1B /* Muli-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 158CA0C71EE4B5270015CA1B /* Muli-Bold.ttf */; };
 		158CA0CB1EE4B5270015CA1B /* Muli-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 158CA0C81EE4B5270015CA1B /* Muli-Light.ttf */; };
@@ -40,6 +42,8 @@
 		0E0B1E3C3187E6E655FB5AC6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1582BC811EE4C9CA0087D139 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		1582BC841EE4D2A60087D139 /* RepositoryDateTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryDateTransform.swift; sourceTree = "<group>"; };
+		1582BC861EE4D9370087D139 /* RepositoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
+		1582BC881EE4D9600087D139 /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		158CA0C11EE4B0BD0015CA1B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		158CA0C71EE4B5270015CA1B /* Muli-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Bold.ttf"; sourceTree = "<group>"; };
 		158CA0C81EE4B5270015CA1B /* Muli-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Muli-Light.ttf"; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				1582BC811EE4C9CA0087D139 /* UIViewController.swift */,
+				1582BC881EE4D9600087D139 /* Array.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 		158CA0C41EE4B0BD0015CA1B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1582BC861EE4D9370087D139 /* RepositoryCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -435,6 +441,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1582BC891EE4D9600087D139 /* Array.swift in Sources */,
 				158CA0CE1EE4B58C0015CA1B /* RepositoriesViewController.swift in Sources */,
 				158CA0D01EE4B59A0015CA1B /* RepositoryViewController.swift in Sources */,
 				1582BC821EE4C9CA0087D139 /* UIViewController.swift in Sources */,
@@ -442,6 +449,7 @@
 				158CA0C51EE4B0BD0015CA1B /* AppDelegate.swift in Sources */,
 				158CA0D21EE4B5AA0015CA1B /* Repository.swift in Sources */,
 				1582BC851EE4D2A60087D139 /* RepositoryDateTransform.swift in Sources */,
+				1582BC871EE4D9370087D139 /* RepositoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

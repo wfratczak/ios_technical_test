@@ -7,33 +7,7 @@
 //
 
 import UIKit
-
-class RepositoryCell: UITableViewCell {
-    
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var roundedView: UIView!
-    var shadowLayer: CAShapeLayer!
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        addShadowIfNeeded()
-    }
-    
-    private func addShadowIfNeeded() {
-        guard shadowLayer == nil else {return}
-        shadowLayer = CAShapeLayer()
-        shadowLayer.path = UIBezierPath(roundedRect: roundedView.frame, cornerRadius: 0).cgPath
-        shadowLayer.fillColor = UIColor.clear.cgColor
-        shadowLayer.shadowColor = UIColor.white.cgColor
-        shadowLayer.shadowPath = shadowLayer.path
-        shadowLayer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        shadowLayer.shadowOpacity = 0.4
-        shadowLayer.shadowRadius = 5
-        layer.insertSublayer(shadowLayer, at: 0)
-    }
-    
-}
+import Hero
 
 class RepositoriesViewController: UIViewController {
 
@@ -46,12 +20,16 @@ class RepositoriesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sortSegmentedControl: UISegmentedControl!
     
-    
     // MARK: Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadRepos()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        clearAnimationIDs()
     }
     
     // MARK: Config
@@ -80,6 +58,23 @@ class RepositoriesViewController: UIViewController {
         let sortType = SortType(rawValue: sender.selectedSegmentIndex)!
         repositories = repositories.sorted(by: sortType)
         tableView.reloadData()
+        tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+    }
+    
+    // MARK: Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let vc = segue.destination as? RepositoryViewController, let indexPath = sender as? IndexPath else {return}
+        vc.repository = repositories[indexPath.row]
+    }
+    
+    // MARK: Helpers
+    
+    private func clearAnimationIDs() {
+        for cell in tableView.visibleCells {
+            guard let cell = cell as? RepositoryCell else {return}
+            cell.roundedView.heroID = ""
+        }
     }
     
 }
@@ -103,6 +98,13 @@ extension RepositoriesViewController: UITableViewDelegate, UITableViewDataSource
         return tableView.dequeueReusableCell(withIdentifier: String(describing: RepositoryCell.self))!
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let cell = tableView.cellForRow(at: indexPath) as! RepositoryCell
+        cell.roundedView.heroID = Const.cellAnimationID
+        performSegue(withIdentifier: String(describing: RepositoryViewController.self), sender: indexPath)
+    }
+    
 }
 
 // MARK: Const
@@ -115,16 +117,6 @@ extension RepositoriesViewController {
     
     struct Const {
         static let dateFormat = "yyyy-MM-dd HH:mm"
+        static let cellAnimationID = "background_view"
     }
-}
-
-extension Array where Element: Repository {
-    
-    func sorted(by type: RepositoriesViewController.SortType) -> [Element] {
-        switch type {
-        case .name: return sorted{ $0.name < $1.name }
-        case .date: return sorted{ $0.updatedAt < $1.updatedAt }
-        }
-    }
-    
 }
