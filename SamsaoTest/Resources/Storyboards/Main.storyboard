@@ -44,12 +44,12 @@
                                                     <rect key="frame" x="15" y="10" width="345" height="78"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="751" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0tU-rV-FBH">
-                                                            <rect key="frame" x="15" y="12" width="315" height="24"/>
+                                                            <rect key="frame" x="15" y="12" width="315" height="24.5"/>
                                                             <fontDescription key="fontDescription" name="Muli-Bold" family="Muli" pointSize="18"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjP-wA-qST">
-                                                            <rect key="frame" x="15" y="44" width="43" height="22"/>
+                                                            <rect key="frame" x="15" y="44.5" width="43" height="21.5"/>
                                                             <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -86,7 +86,7 @@
                                                 <constraint firstItem="lc3-8h-WNR" firstAttribute="leading" secondItem="0pn-TU-oXj" secondAttribute="leading" constant="15" id="Zcc-2E-TwL"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="dateLabel" destination="sjP-wA-qST" id="FMH-Ot-9L8"/>
                                             <outlet property="nameLabel" destination="0tU-rV-FBH" id="hzG-0j-IGw"/>
@@ -105,13 +105,13 @@
                                     <segment title="By name"/>
                                     <segment title="By last update"/>
                                 </segments>
-                                <color key="tintColor" red="0.02023091912" green="0.82043915990000005" blue="0.41470009089999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="sortAction:" destination="hpn-HO-mgR" eventType="valueChanged" id="NLf-0C-QIn"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" red="0.023524917662143707" green="0.023532388731837273" blue="0.023522557690739632" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.02023091912" green="0.82043915990000005" blue="0.41470009089999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="8bE-4R-UNK" secondAttribute="trailing" id="5ga-tP-3hw"/>
                             <constraint firstItem="8bE-4R-UNK" firstAttribute="top" secondItem="U2N-7b-XvP" secondAttribute="bottom" constant="8" id="E7L-BX-zek"/>
@@ -169,7 +169,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K3L-I4-PBV">
-                                <rect key="frame" x="15" y="241" width="345" height="185"/>
+                                <rect key="frame" x="15" y="242" width="345" height="183.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="751" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pEm-kW-8kK">
                                         <rect key="frame" x="15" y="20" width="315" height="23"/>
@@ -177,22 +177,22 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3z-SV-UMo">
-                                        <rect key="frame" x="151" y="51" width="43" height="22"/>
+                                        <rect key="frame" x="151" y="51" width="43" height="21.5"/>
                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVh-9Q-qr8">
-                                        <rect key="frame" x="151" y="81" width="43" height="22"/>
+                                        <rect key="frame" x="151" y="80.5" width="43" height="21.5"/>
                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abd-hq-8bD">
-                                        <rect key="frame" x="151" y="111" width="43" height="22"/>
+                                        <rect key="frame" x="151" y="110" width="43" height="21.5"/>
                                         <fontDescription key="fontDescription" name="Muli-Regular" family="Muli" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WI1-N9-KIE">
-                                        <rect key="frame" x="0.0" y="145" width="345" height="40"/>
+                                        <rect key="frame" x="0.0" y="143.5" width="345" height="40"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="F2L-YT-NYE"/>
@@ -206,7 +206,7 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fX9-Zb-dR0">
-                                        <rect key="frame" x="0.0" y="143" width="345" height="2"/>
+                                        <rect key="frame" x="0.0" y="141.5" width="345" height="2"/>
                                         <color key="backgroundColor" white="1" alpha="0.25101701183431951" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="df2-BG-HyV"/>
@@ -241,7 +241,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="samsao_logo_blanc-1" translatesAutoresizingMaskIntoConstraints="NO" id="chD-V8-nW3">
-                                <rect key="frame" x="89" y="180" width="196" height="35"/>
+                                <rect key="frame" x="89" y="181" width="196" height="35"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="logo"/>
                                 </userDefinedRuntimeAttributes>

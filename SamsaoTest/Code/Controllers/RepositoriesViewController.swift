@@ -8,6 +8,7 @@
 
 import UIKit
 import Hero
+import DGElasticPullToRefresh
 
 class RepositoriesViewController: UIViewController {
 
@@ -16,6 +17,7 @@ class RepositoriesViewController: UIViewController {
         formatter.dateFormat = Const.dateFormat
         return formatter
     }()
+    var sortType: SortType = .name
     var repositories: [Repository] = []
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var sortSegmentedControl: UISegmentedControl!
@@ -24,6 +26,8 @@ class RepositoriesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureNavigationBar()
+        configurePullToRefresh()
         loadRepos()
     }
     
@@ -34,20 +38,34 @@ class RepositoriesViewController: UIViewController {
     
     // MARK: Config
     
-    private func configureView() {
-        
+    private func configureNavigationBar() {
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.view.backgroundColor = UIColor.clear
+    }
+    
+    private func configurePullToRefresh() {
+        let loadingView = DGElasticPullToRefreshLoadingViewCircle()
+        loadingView.tintColor = .white
+        tableView.dg_addPullToRefreshWithActionHandler({ [weak self] () -> Void in
+            self?.loadRepos()
+            }, loadingView: loadingView)
+        tableView.dg_setPullToRefreshFillColor((navigationController?.navigationBar.barTintColor)!)
+        tableView.dg_setPullToRefreshBackgroundColor(.black)
     }
 
     // MARK: Networking
     
     private func loadRepos() {
-        APIManager.shared.repositories { (repos, error) in
+        APIManager.shared.repositories {(repos, error) in
+            self.tableView.dg_stopLoading()
             guard error == nil else {
                 self.showErrorAlert(with: "Can not load repositories. Please try again by pull to refresh.")
                 return
             }
             guard let repos = repos else {return}
-            self.repositories = repos.sorted(by: .name)
+            self.repositories = repos.sorted(by: self.sortType)
             self.tableView.reloadData()
         }
     }
@@ -55,8 +73,9 @@ class RepositoriesViewController: UIViewController {
     // MARK: Actions
     
     @IBAction func sortAction(_ sender: UISegmentedControl) {
-        let sortType = SortType(rawValue: sender.selectedSegmentIndex)!
-        repositories = repositories.sorted(by: sortType)
+        let type = SortType(rawValue: sender.selectedSegmentIndex)!
+        sortType = type
+        repositories = repositories.sorted(by: type)
         tableView.reloadData()
         tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
     }

@@ -10,4 +10,5 @@ target 'SamsaoTest' do
     pod 'Hero'
     pod 'AlamofireObjectMapper'
     pod 'Alamofire'
+    pod 'DGElasticPullToRefresh'
 end

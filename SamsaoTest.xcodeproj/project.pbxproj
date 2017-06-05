@@ -106,11 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				158CA0C11EE4B0BD0015CA1B /* AppDelegate.swift */,
-				1582BC831EE4D28C0087D139 /* Other */,
-				1582BC801EE4C9BF0087D139 /* Extensions */,
 				158CA0C21EE4B0BD0015CA1B /* Controllers */,
 				158CA0C31EE4B0BD0015CA1B /* Models */,
 				158CA0C41EE4B0BD0015CA1B /* Views */,
+				1582BC831EE4D28C0087D139 /* Other */,
+				1582BC801EE4C9BF0087D139 /* Extensions */,
 			);
 			path = Code;
 			sourceTree = "<group>";
